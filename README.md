@@ -1,4 +1,4 @@
-# rhf-sample
+# react-hook-form-sample
 react-hook-formを使用したフォームのサンプル集
 
 ## controlled or uncontrolled formについて
