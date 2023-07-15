@@ -6,7 +6,7 @@ export const UncontrolledStep1 = () => {
 
   return (
     <>
-      <h1>Uncontrolled Form</h1>
+      <h1>Uncontrolled Form Step1</h1>
       <InputText
         type='text'
         {...register('email')}

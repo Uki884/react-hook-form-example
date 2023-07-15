@@ -17,7 +17,7 @@ export const userSignUpSchema = z.object({
 export type UserSignUpSchemaType = z.infer<typeof userSignUpSchema>;
 
 const userSignUpFormState = atom({
-  key: "userSignUpFormState",
+  key: "userSignUpFormState2",
   default: {
     email: '',
     name: '',
@@ -30,11 +30,11 @@ type ErrorType = FieldErrors<{
 }>;
 
 const errorsState = atom<ErrorType>({
-  key: "errorsState",
+  key: "errorsState2",
   default: {},
 });
 
-export const useUncontrolledForm = () => {
+export const useControlledForm = () => {
   const [userFormValue, setUserFormValue] = useRecoilState(userSignUpFormState);
   const [errorsValue, setErrorsValue] = useRecoilState(errorsState);
   const navigate = useNavigate();
@@ -47,6 +47,7 @@ export const useUncontrolledForm = () => {
     control,
     trigger,
     setError,
+    setValue,
   } = useForm<UserSignUpSchemaType>({
     mode: "all",
     resolver: zodResolver(userSignUpSchema),
@@ -82,5 +83,6 @@ export const useUncontrolledForm = () => {
     isValid,
     trigger,
     isDirty,
+    setValue,
   };
 };

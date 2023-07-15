@@ -21,7 +21,7 @@ export const UncontrolledStep2 = () => {
   return (
     // eslint-disable-next-line @typescript-eslint/no-misused-promises
     <form onSubmit={handleSubmit(submit)}>
-      <h1>Uncontrolled Form</h1>
+      <h1>Uncontrolled Form Step2</h1>
       メールアドレス
       <InputText
         type='text'
