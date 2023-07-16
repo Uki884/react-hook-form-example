@@ -48,7 +48,7 @@ export const useUncontrolledForm = () => {
     trigger,
     setError,
   } = useForm<UserSignUpSchemaType>({
-    mode: "all",
+    mode: 'onChange',
     resolver: zodResolver(userSignUpSchema),
     defaultValues: userFormValue,
   });
