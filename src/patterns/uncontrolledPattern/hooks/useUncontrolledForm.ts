@@ -12,6 +12,9 @@ export const userSignUpSchema = z.object({
   email: z
     .string({ required_error: "メールアドレスを入力してください" })
     .email({ message: "メールアドレスの形式に誤りがあります" }),
+  corporation: z.object({
+    name: z.string({ required_error: "会社名を入力してください" }).min(1, { message: "1文字以上入力してください" }),
+  })
 });
 
 export type UserSignUpSchemaType = z.infer<typeof userSignUpSchema>;
@@ -21,6 +24,9 @@ const userSignUpFormState = atom({
   default: {
     email: '',
     name: '',
+    corporation: {
+      name: '',
+    }
   },
 });
 

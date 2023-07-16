@@ -4,6 +4,8 @@ import { UncontrolledStep1 } from './patterns/uncontrolledPattern/pages/uncontro
 import { UncontrolledStep2 } from './patterns/uncontrolledPattern/pages/uncontrolled/step2'
 import { ControlledStep1 } from './patterns/controlledPattern/pages/controlled/step1'
 import { ControlledStep2 } from './patterns/controlledPattern/pages/controlled/step2'
+import { UncontrolledStep3 } from './patterns/uncontrolledPattern/pages/uncontrolled/step3'
+import { UncontrolledStep4 } from './patterns/uncontrolledPattern/pages/uncontrolled/step4'
 
 const Home = () => {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/uncontrolled/step1" element={<UncontrolledStep1 />} />
         <Route path="/uncontrolled/step2" element={<UncontrolledStep2 />} />
+        <Route path="/uncontrolled/step3" element={<UncontrolledStep3 />} />
+        <Route path="/uncontrolled/step4" element={<UncontrolledStep4 />} />
         <Route path="/controlled/step1" element={<ControlledStep1 />} />
         <Route path="/controlled/step2" element={<ControlledStep2 />} />
       </Routes>

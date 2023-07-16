@@ -12,7 +12,7 @@ export const InputText = forwardRef<HTMLInputElement, InputTextProps>(({ error, 
   return (
     <>
       <input {...props} defaultValue={defaultValue} ref={ref} />
-      <div>{ error }</div>
+      <div style={{ color: 'red'}}>{ error }</div>
     </>
   )
 })
